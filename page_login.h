@@ -15,6 +15,12 @@ public:
     explicit Page_Login(QWidget *parent = nullptr);
     ~Page_Login();
 
+private slots:
+    void on_btn_login_clicked();
+    void on_brn_exit_clicked();
+signals:
+    void sendLoginSuccess();
+
 private:
     Ui::Page_Login *ui;
 };

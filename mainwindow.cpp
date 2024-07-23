@@ -6,6 +6,11 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    m_dlgLogin.show();
+    auto f = [&](){
+        this ->show();
+    };
+    connect(&m_dlgLogin, &Page_Login::sendLoginSuccess , this , f);
 }
 
 MainWindow::~MainWindow()

@@ -12,3 +12,20 @@ Page_Login::~Page_Login()
 {
     delete ui;
 }
+
+void Page_Login::on_btn_login_clicked()
+{
+    //数据库查找用户名和密码
+
+    //失败就提示
+
+    //成功进入主界面
+    emit sendLoginSuccess();
+}
+
+
+void Page_Login::on_brn_exit_clicked()
+{
+    exit(0);
+}
+
